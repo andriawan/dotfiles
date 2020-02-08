@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=~/Library/Android/sdk/tools:$PATH
+export PATH=~/Library/Android/sdk/platform-tools:$PATH 
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/andriawan/.oh-my-zsh"
@@ -7,6 +9,9 @@ export LC_CTYPE="en_US.UTF-8"
 export EDITOR="vim"
 export ZPLUG_HOME=~/.zplug
 
+# nvm config
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 if [ ! -d "$ZSH" ];then
     echo "Installing oh-my-zsh in $ZSH"
@@ -169,6 +174,13 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 alias usage='du -chsx * | sort -rh | head'
 alias ducks='du -cks * | sort -rn | head'
 
+#commit count git
+alias gitcc='git log --oneline --all | wc -l'
+
 alias cls='clear'
+alias xampp_start='sudo /Applications/XAMPP/xamppfiles/xampp start'
+alias xampp_stop='sudo /Applications/XAMPP/xamppfiles/xampp stop'
+
 
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
