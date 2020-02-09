@@ -4,6 +4,7 @@ set ruler
 syntax on
 set encoding=utf8
 set nocompatible
+set wildmenu
 
 " ignore case sensitive
 set ignorecase
@@ -19,6 +20,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Initialize plugin system end
 call plug#end()
@@ -26,5 +30,11 @@ call plug#end()
 " color scheme
 colorscheme delek
 
+" NerdtTree config
+let NERDTreeShowHidden=1
+
+" vim airlines scheme
+AirlineTheme ayu_dark
+
 " maping keyboard for shortcut
-map <C-n> :NERDTree
+m
