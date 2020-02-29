@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=~/Library/Android/sdk/tools:$PATH
 export PATH=~/Library/Android/sdk/platform-tools:$PATH 
+export PATH=~/flutter/bin:$PATH 
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/andriawan/.oh-my-zsh"
@@ -137,6 +138,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 plugins=(zsh-autosuggestions)
+plugins=(docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -180,7 +182,7 @@ alias gitcc='git log --oneline --all | wc -l'
 alias cls='clear'
 alias xampp_start='sudo /Applications/XAMPP/xamppfiles/xampp start'
 alias xampp_stop='sudo /Applications/XAMPP/xamppfiles/xampp stop'
-
+alias composer_php5="/Applications/XAMPP/bin/php /Users/andriawan/composer.phar"
 
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
