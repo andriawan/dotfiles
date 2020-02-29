@@ -1,7 +1,7 @@
 [user]
 	name = Muhammad Irwan Andriawan
-	email = andriawan2014@gmail.com
-	signingkey = EDE1CC7FF1BA6212
+	email = irwan@andriawan.com
+	signingkey = 719A5B5EE5D04271
 [gpg]
 	program = gpg
 [commit]
