@@ -10,7 +10,11 @@ return {
         explorer = {
           follow_file = true,
           hidden = true,
-          ignored = false,
+          ignored = true,
+        },
+        files = {
+          hidden = true, -- tampilin dotfiles kayak .env, .gitignore
+          ignored = true, -- tampilin file yang di-gitignore juga
         },
       },
     },

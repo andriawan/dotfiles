@@ -9,9 +9,16 @@
 --
 -- Automatically turn on wrap and spell check for MDX files
 vim.api.nvim_create_autocmd("BufReadPost", {
-  pattern = { "*.mdx" },
-  callback = function()
-    vim.opt_local.wrap = true -- Enable line wrapping
-    vim.opt_local.spell = true -- Optional: Enable spellcheck for prose
+  pattern = { "*.mdx", "*.log" }, -- Added *.log here
+  callback = function(args)
+    -- Enable line wrapping for both file types
+    vim.opt_local.wrap = true
+
+    -- Only enable spellcheck if the file is markdown (.mdx)
+    if string.match(args.file, "%.mdx$") then
+      vim.opt_local.spell = true
+    else
+      vim.opt_local.spell = false
+    end
   end,
 })
