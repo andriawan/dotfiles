@@ -144,3 +144,7 @@ alias usage="du -hsc * | sort -nr"
 source /usr/share/bash-completion/completions/git
 export GIT_COMMITTER_EMAIL=irwan@andriawan.com
 export GIT_COMMITTER_NAME="Muhammad Irwan Andriawan"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

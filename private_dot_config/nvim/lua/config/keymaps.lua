@@ -40,7 +40,7 @@ end, { desc = "Run npm run dev" })
 -- Replaces your current mapping but injects "direction=float" dynamically
 vim.keymap.set("n", "<C-\\>", function()
   local count = vim.v.count > 0 and vim.v.count or 1
-  vim.cmd(count .. "ToggleTerm direction=float")
+  vim.cmd(count .. "ToggleTerm direction=tab")
 end, { desc = "Toggle Floating Terminal with Count" })
 
 -- Terminal Mode fallback to exit cleanly

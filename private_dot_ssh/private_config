@@ -1,0 +1,89 @@
+Host *
+ AddKeysToAgent yes
+ IdentitiesOnly yes
+Host bitbucket.org
+ IdentityFile ~/.ssh/irwan@andriawan.com
+ PreferredAuthentications publickey
+ ServerAliveInterval 30
+
+Host mhdc-dev-fe
+  User mhdcdev
+  Hostname 165.22.246.205
+  Port 2280
+  ServerAliveInterval 30
+    IdentityFile ~/.ssh/irwan@andriawan.com
+
+Host mhdc-grafana
+  User deployer
+  Hostname 157.245.53.112
+  IdentityFile ~/.ssh/irwan@andriawan.com
+  ServerAliveInterval 30
+
+Host mhdc-uat
+  User deployer
+  Hostname 103.59.160.139
+  IdentityFile ~/.ssh/irwan@andriawan.com
+  ServerAliveInterval 30
+Host mhdc-prod
+  User deployer
+  Port 2280
+  Hostname 68.183.236.80
+  IdentityFile ~/.ssh/irwan@andriawan.com
+  ServerAliveInterval 30
+
+Host dev_anaonline
+  IdentityFile ~/.ssh/irwan@andriawan.com
+  HostName 178.128.80.186
+  user deployer
+  ServerAliveInterval 60
+  ServerAliveCountMax 5
+
+Host prod_anaonline
+  HostName 128.199.127.184 
+  user deployer
+  IdentityFile ~/.ssh/irwan@andriawan.com
+  ServerAliveInterval 60
+  ServerAliveCountMax 5
+
+Host db_anaonline
+  HostName 206.189.81.238
+  IdentityFile ~/.ssh/irwan@andriawan.com
+  user deployer
+  ServerAliveInterval 60
+  ServerAliveCountMax 5
+Host gitlab.com
+ IdentityFile /home/andriawan/.ssh/id_rsa_1789183819
+ PreferredAuthentications publickey
+ ServerAliveInterval 30
+Host github.com
+ IdentityFile /home/andriawan/.ssh/id_rsa_1789183819
+ PreferredAuthentications publickey
+ ServerAliveInterval 30
+
+Host mhdc-prod3    #Added by lazyssh
+    HostName 103.94.239.82
+    User deployer
+    Port 22
+    IdentityFile ~/.ssh/irwan@andriawan.com
+Host biznet-fe-prod    #Added by lazyssh
+    HostName 103.94.239.17
+    User deployer
+    Port 22
+    IdentityFile ~/.ssh/irwan@andriawan.com
+Host new-mnet-dev    #Added by lazyssh
+    HostName 103.31.204.189
+    User deployer
+    Port 22
+    IdentityFile ~/.ssh/irwan@andriawan.com
+Host rodadua
+    HostName 43.134.38.192
+    User deploy
+    Port 22
+    IdentityFile ~/.ssh/deploy-dev@rodadua.id
+    IdentitiesOnly yes
+    ServerAliveInterval 30
+Host baznasjabar    #Added by lazyssh
+    HostName 10.10.1.110
+    User baznasjabar
+    Port 22
+    IdentityFile ~/.ssh/irwan@andriawan.com
